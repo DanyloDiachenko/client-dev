@@ -15,9 +15,49 @@
       a:hover {
         color: #d35400;
       }
+      #lab-js section {
+        margin: 1rem 0;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        background: rgba(250, 250, 250, 0.97);
+      }
+      #lab-js button {
+        margin: 0.25rem;
+        padding: 0.4rem 0.8rem;
+        cursor: pointer;
+      }
+      #lab-js #insert-demo,
+      #lab-js #box-inner,
+      #lab-js #box-outer {
+        padding: 0.5rem;
+        border: 1px solid #999;
+        margin: 0.5rem 0;
+      }
     </style>
+    <script>
+      (function () {
+        alert(
+          "Ласкаво просимо до розділу про скрипти та DOM на сайті про програмне забезпечення.",
+        );
+        var name = prompt(
+          "Введіть ваше ім'я (журнал доступу до документації ПЗ):",
+          "Користувач",
+        );
+        if (name) {
+          var ok = confirm(
+            "Підтвердити перегляд розділу про DOM/BOM для " + name + "?",
+          );
+          if (ok) alert("Доступ дозволено. Приємної роботи, " + name + "!");
+        }
+      })();
+    </script>
   </head>
   <body>
+    <script>
+      document.write(
+        "<p><em>Рядок через document.write: каталог програмних компонентів підключено.</em></p>",
+      );
+    </script>
     <h1 id="main-heading" class="page-title">
       Програмне забезпечення: структура документа та посилання
     </h1>
@@ -278,5 +318,74 @@
       height="300"
       style="border: 2px solid #3584e4"
     ></iframe>
+
+    <div id="lab-js">
+      <h2>JavaScript: діалоги, DOM, BOM</h2>
+
+      <section>
+        <h3>Вбудовані та зовнішні скрипти</h3>
+        <button type="button" onclick="dialogWithUser()">
+          Діалог про мову програмування
+        </button>
+        <button
+          type="button"
+          onclick="showDeveloperInfo('Дяченко', 'Данило', 'інженер з ПЗ')"
+        >
+          Інфо про автора (3 параметри)
+        </button>
+        <button type="button" onclick="showDeveloperInfo('Дяченко', 'Данило')">
+          Інфо про автора (посада за замовчуванням)
+        </button>
+        <button
+          type="button"
+          onclick="compareStringsAndAlert('MIT', 'GNU General Public License v3')"
+        >
+          Порівняти рядки ліцензій (alert)
+        </button>
+        <button type="button" onclick="changeBackgroundFor30Seconds('#e3f2fd')">
+          Фон «документація» на 30 секунд
+        </button>
+      </section>
+
+      <section>
+        <h3>location та вузли DOM</h3>
+        <button type="button" onclick="redirectToOtherPage('redirect.html')">
+          Сторінка «Релізи ПЗ» (location.href)
+        </button>
+        <p id="demo-id">Опис модуля: очікує оновлення.</p>
+        <button type="button" onclick="demoGetElementById()">getElementById</button>
+        <p class="demo-query">Компонент A</p>
+        <p class="demo-query">Компонент B</p>
+        <button type="button" onclick="demoQuerySelectorAll()">
+          querySelectorAll
+        </button>
+        <p>innerHTML:</p>
+        <div id="box-inner">Короткий опис патчу.</div>
+        <button type="button" onclick="demoInnerHTML()">innerHTML</button>
+        <p>outerHTML:</p>
+        <div id="box-outer">Блок «Збірка».</div>
+        <button type="button" onclick="demoOuterHTML()">outerHTML</button>
+        <p>nodeValue / data:</p>
+        <span id="node-value-demo">Версія 1.0.0</span>
+        <button type="button" onclick="demoNodeValue()">nodeValue</button>
+        <p>textContent:</p>
+        <span id="text-content-demo">Статус: чернетка</span>
+        <button type="button" onclick="demoTextContent()">textContent</button>
+      </section>
+
+      <section>
+        <h3>createElement, append, prepend, after, replaceWith, remove</h3>
+        <div id="insert-demo">Журнал подій:</div>
+        <button type="button" onclick="demoCreateAndInsert()">
+          append / prepend / after
+        </button>
+        <p id="replace-target">Запис про застарілий API.</p>
+        <button type="button" onclick="demoReplaceWith()">replaceWith</button>
+        <p id="remove-target">Тимчасове повідомлення про баг.</p>
+        <button type="button" onclick="demoRemove()">remove()</button>
+      </section>
+    </div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
