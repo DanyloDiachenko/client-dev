@@ -5,6 +5,7 @@
     <meta name="author" content="D. Diachenko">
     <title>Джерела — Програмне забезпечення</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mouse-demo.css">
     <style>
       a:link { color: #16a085; }
       a:visited { color: #8e44ad; }
@@ -21,5 +22,42 @@
         <a href="contact.html">Джерела</a>
         | <a href="about.html#section-other">Фрагмент «Розробка»</a>
     </nav>
+
+    <div class="lab-mouse-scope">
+      <h2 class="page-title">Події миші та drag-and-drop</h2>
+
+      <section>
+        <h3>mouseover / mouseout, target, relatedTarget</h3>
+        <p>Наведіть курсор на блоки категорій ПЗ.</p>
+        <div class="hover-boxes">
+          <div class="hover-box" id="box-a">Системне ПЗ</div>
+          <div class="hover-box" id="box-b">Прикладне ПЗ</div>
+          <div class="hover-box" id="box-c">Інструментальне ПЗ</div>
+        </div>
+        <div id="log-target-mouse">—</div>
+      </section>
+
+      <section>
+        <h3>Перетягування (mousedown, mousemove, mouseup)</h3>
+        <p>Перетягніть елемент у зону палітри або стеку.</p>
+        <div class="drag-source">
+          <span class="draggable" data-type="text">TypeScript</span>
+          <span class="draggable" data-type="text">Docker</span>
+          <span class="draggable" data-type="image">
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/nodejs.svg"
+              alt="Node.js"
+              width="80"
+              height="60"
+              style="object-fit:contain;padding:4px;background:#fff;border-radius:4px"
+            />
+          </span>
+        </div>
+        <div class="drop-here" id="zone1">Палітра проєкту</div>
+        <div class="drop-here" id="zone2">Стек технологій</div>
+      </section>
+    </div>
+
+    <script src="js/mouse.js"></script>
 </body>
 </html>
