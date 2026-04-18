@@ -1,18 +1,267 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="D. Diachenko">
-    <title>Головна — Програмне забезпечення</title>
-</head>
-<body>
-    <h1>Програмне забезпечення</h1>
-    <p>Ласкаво просимо на навчальний сайт про програмне забезпечення: системне та прикладне ПЗ, інструменти розробки та життєвий цикл програм.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="D. Diachenko" />
+    <title>Програмне забезпечення — HTML-структура</title>
+    <style>
+      body {
+        background-color: #f0f4f8;
+        background-image: url("https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&w=1600&q=75");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      a:link {
+        color: #1a5fb4;
+      }
+      a:visited {
+        color: #613583;
+      }
+      a:hover {
+        color: #c01c28;
+      }
+    </style>
+  </head>
+  <body link="#1a5fb4" vlink="#613583">
+    <h1>Програмне забезпечення: структура документа та посилання</h1>
+
     <nav>
-        <a href="index.html">Головна</a> |
-        <a href="about.html">Що таке ПЗ</a> |
-        <a href="services.html">Види ПЗ</a> |
-        <a href="contact.html">Джерела</a>
+      <a href="index.html">Головна</a> |
+      <a href="about.html">Що таке ПЗ</a> |
+      <a href="services.html">Види ПЗ</a> |
+      <a href="contact.html">Джерела</a>
+      <br />
+      <a href="index.html#formatting">Ліцензії на цій сторінці</a> |
+      <a href="index.html#intro">Вступ (якір)</a> |
+      <a href="about.html#section-other">Розробка на іншій сторінці</a> |
+      <a
+        href="https://www.gnu.org/philosophy/free-sw.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Вільне ПЗ (GNU)</a
+      >
     </nav>
-</body>
+
+    <h2 id="intro">Вступ</h2>
+    <p>
+      Програмне забезпечення (ПЗ) — інструкції та дані для комп’ютера, що
+      реалізують алгоритми та інтерфейси користувача. Документ про ПЗ можна
+      оформити мовою HTML з чіткою структурою розділів.
+    </p>
+    <p>
+      Секція <code>&lt;head&gt;</code> містить метадані та
+      <code>&lt;title&gt;</code>, а <code>&lt;body&gt;</code> — текст про
+      операційні системи, додатки та бібліотеки.
+    </p>
+    <p>
+      Гіперпосилання <code>&lt;a href="..."&gt;</code> ведуть до розділів
+      поточної сторінки, до якорів іншої сторінки або до зовнішніх ресурсів про
+      ПЗ. Колір посилань задається атрибутами <code>link</code> та
+      <code>vlink</code> у <code>&lt;body&gt;</code> або через CSS.
+    </p>
+
+    <h2 id="formatting">Ліцензії та форматування тексту</h2>
+    <p>
+      Терміни <strong>пропрієтарне ПЗ</strong> та <em>вільне ПЗ</em> часто
+      зустрічаються в договорах і ліцензіях. Важливо розрізняти
+      <u>копірайт</u> та умови <s>застарілих</s> угод після оновлення версії.
+    </p>
+    <p>
+      Комбінація: <strong><em>комерційна ліцензія з підтримкою</em></strong>.
+    </p>
+
+    <h3>Ілюстрації до теми ПЗ</h3>
+    <p>
+      Зображення зменшене та збільшене вдвічі; клік відкриває повний розмір у
+      новій вкладці.
+    </p>
+    <p>
+      <a
+        href="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&w=1600&q=90"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&h=300&q=80"
+          alt="Код на екрані редактора"
+          width="200"
+          height="150"
+          title="Клік — повний розмір"
+        />
+      </a>
+      <a
+        href="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&w=2000&q=90"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&h=300&q=80"
+          alt="Робоче місце розробника з ноутбуком"
+          width="800"
+          height="600"
+          title="Клік — повний розмір"
+        />
+      </a>
+    </p>
+
+    <h3>Списки</h3>
+    <p>Етапи впровадження ПЗ у компанії:</p>
+    <ol type="1">
+      <li>Аналіз вимог</li>
+      <li>Вибір або розробка</li>
+      <li>Тестування та навчання</li>
+    </ol>
+    <ol type="A">
+      <li>Патч A</li>
+      <li>Патч B</li>
+    </ol>
+    <p>Властивості якісного ПЗ:</p>
+    <ul type="disc">
+      <li>Надійність</li>
+      <li>Масштабованість</li>
+    </ul>
+    <ul type="circle">
+      <li>Зручність інтерфейсу</li>
+    </ul>
+    <ul type="square">
+      <li>Безпека оновлень</li>
+    </ul>
+    <p>Словник термінів:</p>
+    <dl>
+      <dt>API</dt>
+      <dd>Інтерфейс прикладного програмування між модулями ПЗ.</dd>
+      <dt>Драйвер</dt>
+      <dd>Програма, що з’єднує ОС з апаратним пристроєм.</dd>
+    </dl>
+
+    <h2>Таблиця 3×4</h2>
+    <table border="1" cellspacing="4" cellpadding="8">
+      <caption>
+        Порівняння категорій ПЗ
+      </caption>
+      <thead>
+        <tr style="background-color: #3584e4; color: white">
+          <th>Системне</th>
+          <th>Прикладне</th>
+          <th>Інструментальне</th>
+          <th>Middleware</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linux.svg"
+              alt="Linux"
+              width="80"
+              height="60"
+              style="
+                object-fit: contain;
+                padding: 4px;
+                background: #fff;
+                border-radius: 4px;
+              "
+            />
+          </td>
+          <td>
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/libreoffice.svg"
+              alt="LibreOffice"
+              width="80"
+              height="60"
+              style="
+                object-fit: contain;
+                padding: 4px;
+                background: #fff;
+                border-radius: 4px;
+              "
+            />
+          </td>
+          <td>
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/visualstudiocode.svg"
+              alt="Visual Studio Code"
+              width="80"
+              height="60"
+              style="
+                object-fit: contain;
+                padding: 4px;
+                background: #fff;
+                border-radius: 4px;
+              "
+            />
+          </td>
+          <td>
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/docker.svg"
+              alt="Docker"
+              width="80"
+              height="60"
+              style="
+                object-fit: contain;
+                padding: 4px;
+                background: #fff;
+                border-radius: 4px;
+              "
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><a href="https://kernel.org/">Linux Kernel</a></td>
+          <td><a href="https://www.libreoffice.org/">LibreOffice</a></td>
+          <td><a href="https://code.visualstudio.com/">VS Code</a></td>
+          <td><a href="about.html">Сторінка про цикл ПЗ</a></td>
+        </tr>
+        <tr>
+          <td>Керує ресурсами ПК</td>
+          <td>Вирішує задачі користувача</td>
+          <td>Допомагає створювати ПЗ</td>
+          <td>З’єднує додатки та сервіси</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Складова таблиця</h2>
+    <p>
+      Приклад плану релізу: об’єднання комірок, colgroup, cellspacing та
+      cellpadding.
+    </p>
+    <table border="1" cellspacing="10" cellpadding="12" width="100%">
+      <colgroup>
+        <col style="background-color: #e0e0e0" />
+        <col span="2" style="background-color: #fff3e0" />
+      </colgroup>
+      <caption>
+        План оновлення ПЗ
+      </caption>
+      <tr align="center" style="background-color: #4caf50; color: white">
+        <th colspan="3">Версія 2.0 — основні блоки</th>
+      </tr>
+      <tr align="left">
+        <td rowspan="2" valign="top">Модуль ядра (rowspan=2)</td>
+        <td align="right">Документація</td>
+        <td>Реєстр змін</td>
+      </tr>
+      <tr align="center">
+        <td>Тести автоматичні</td>
+        <td valign="bottom">Ручна перевірка</td>
+      </tr>
+      <tr>
+        <td>Збірка</td>
+        <td colspan="2" align="center">Публікація артефактів (colspan=2)</td>
+      </tr>
+    </table>
+
+    <h2>Плаваючий фрейм (iframe)</h2>
+    <p>Вбудована сторінка про життєвий цикл ПЗ:</p>
+    <iframe
+      src="about.html"
+      title="Життєвий цикл програмного забезпечення"
+      width="100%"
+      height="300"
+      style="border: 2px solid #3584e4"
+    ></iframe>
+  </body>
 </html>
