@@ -1,0 +1,110 @@
+.lab5-scope * {
+  box-sizing: border-box;
+}
+
+.lab5-scope .wrapper {
+  position: relative;
+  min-height: 200px;
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.lab5-scope .float-left {
+  float: left;
+  width: 180px;
+  margin: 0 1rem 1rem 0;
+  padding: 1rem;
+  background-color: #e8f6f3;
+  border: 2px solid #1abc9c;
+}
+
+.lab5-scope .float-right {
+  float: right;
+  width: 160px;
+  margin: 0 0 1rem 1rem;
+  padding: 1rem;
+  background-color: #fdebd0;
+  border: 2px solid #f39c12;
+}
+
+.lab5-scope .position-static {
+  position: static;
+  padding: 0.5rem;
+  background-color: #ebf5fb;
+  border: 1px solid #3498db;
+}
+
+.lab5-scope .position-relative {
+  position: relative;
+  top: 10px;
+  left: 20px;
+  padding: 0.75rem;
+  background-color: #e8daef;
+  border: 2px solid #9b59b6;
+}
+
+.lab5-scope .position-absolute {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  width: 140px;
+  padding: 0.5rem;
+  background-color: #fadbd8;
+  border: 2px solid #e74c3c;
+}
+
+.lab5-scope .position-fixed {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1001;
+  padding: 0.5rem 0.75rem;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.lab5-scope .list-block li:first-child {
+  font-weight: 700;
+  color: #16a085;
+}
+
+.lab5-scope .list-block li:first-child::before {
+  content: "★ ";
+  color: #f1c40f;
+}
+
+.lab5-scope .list-block li::after {
+  content: " →";
+  font-size: 0.85em;
+  color: #95a5a6;
+}
+
+.lab5-scope .quote::before {
+  content: "« ";
+  font-size: 1.2em;
+  color: #3498db;
+}
+
+.lab5-scope .quote::after {
+  content: " »";
+  font-size: 1.2em;
+  color: #3498db;
+}
+
+.lab5-scope .clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lab5-scope .block-demo {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background-color: #e8f8f5;
+  border-left: 4px solid #1abc9c;
+}

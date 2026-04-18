@@ -5,6 +5,7 @@
     <meta name="author" content="D. Diachenko">
     <title>Види ПЗ та стилі документації</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/layout.css">
     <style>
       a:link { color: #16a085; }
       a:visited { color: #8e44ad; }
@@ -62,5 +63,43 @@
     </dl>
 
     <p style="font-style: italic; color: #7f8c8d">Ліцензійна угода (EULA) визначає права на використання програмного продукту.</p>
+
+    <div class="lab5-scope">
+      <div class="position-fixed">ПЗ: навігація</div>
+
+      <h2>Верстка: блочні й рядкові елементи</h2>
+      <div class="block-demo">Блок опису модуля ядра або сервісу (&lt;div&gt;).</div>
+      <div class="block-demo">Другий блок — панель інструментів IDE.</div>
+      <p>
+        Рядкові маркери: <span style="background:#fff3e0;padding:2px 6px;border-radius:3px">API</span>,
+        <span style="background:#fff3e0;padding:2px 6px;border-radius:3px">SDK</span>.
+      </p>
+
+      <h2>Позиціонування та float</h2>
+      <div class="wrapper clearfix">
+        <div class="float-left">
+          <strong>float: left</strong><br />Панель файлів проєкту.
+        </div>
+        <div class="float-right">
+          <strong>float: right</strong><br />Властивості збірки.
+        </div>
+        <p>Обтікання блоків документації ПЗ; контейнер із <code>clearfix</code>.</p>
+        <div class="position-relative"><strong>position: relative</strong> — примітка про сумісність версій.</div>
+        <div class="position-absolute"><strong>absolute</strong> — мітка Beta.</div>
+      </div>
+
+      <div class="position-static"><strong>position: static</strong> — текст у звичному потоці.</div>
+
+      <h2>Псевдоклас :first-child і ::before / ::after</h2>
+      <ul class="list-block">
+        <li>Етапи SDLC: аналіз, проєктування, реалізація.</li>
+        <li>Тестування та впровадження.</li>
+        <li>Супровід і зняття з експлуатації.</li>
+      </ul>
+
+      <p class="quote">
+        Програмне забезпечення перетворює алгоритми й дані на дії обчислювальної системи.
+      </p>
+    </div>
 </body>
 </html>
