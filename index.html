@@ -3,29 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="D. Diachenko" />
-    <title>Програмне забезпечення — HTML-структура</title>
+    <title>Програмне забезпечення — HTML та CSS</title>
+    <link rel="stylesheet" href="css/styles.css" />
     <style>
-      body {
-        background-color: #f0f4f8;
-        background-image: url("https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&w=1600&q=75");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-      }
       a:link {
-        color: #1a5fb4;
+        color: #16a085;
       }
       a:visited {
-        color: #613583;
+        color: #8e44ad;
       }
       a:hover {
-        color: #c01c28;
+        color: #d35400;
       }
     </style>
   </head>
-  <body link="#1a5fb4" vlink="#613583">
-    <h1>Програмне забезпечення: структура документа та посилання</h1>
+  <body>
+    <h1 id="main-heading" class="page-title">
+      Програмне забезпечення: структура документа та посилання
+    </h1>
 
     <nav>
       <a href="index.html">Головна</a> |
@@ -45,6 +40,20 @@
     </nav>
 
     <h2 id="intro">Вступ</h2>
+    <p
+      style="
+        font-size: 1.05rem;
+        color: #2c3e50;
+        background-color: rgba(232, 218, 239, 0.92);
+        padding: 0.75rem 1rem;
+        border-left: 4px solid #9b59b6;
+      "
+    >
+      Оформлення документації на ПЗ поєднує зовнішній файл CSS, стилі рівня
+      документа та <strong>внутрішній стиль</strong> цього абзацу (атрибут
+      <code>style</code>). Правило <code>#main-heading</code> у таблиці стилів
+      використовує <code>!important</code> для пріоритету.
+    </p>
     <p>
       Програмне забезпечення (ПЗ) — інструкції та дані для комп’ютера, що
       реалізують алгоритми та інтерфейси користувача. Документ про ПЗ можна
@@ -137,7 +146,7 @@
     </dl>
 
     <h2>Таблиця 3×4</h2>
-    <table border="1" cellspacing="4" cellpadding="8">
+    <table class="layout-html" border="1" cellspacing="4" cellpadding="8">
       <caption>
         Порівняння категорій ПЗ
       </caption>
@@ -228,7 +237,13 @@
       Приклад плану релізу: об’єднання комірок, colgroup, cellspacing та
       cellpadding.
     </p>
-    <table border="1" cellspacing="10" cellpadding="12" width="100%">
+    <table
+      class="layout-html"
+      border="1"
+      cellspacing="10"
+      cellpadding="12"
+      width="100%"
+    >
       <colgroup>
         <col style="background-color: #e0e0e0" />
         <col span="2" style="background-color: #fff3e0" />
