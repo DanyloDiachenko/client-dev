@@ -1,0 +1,83 @@
+.lab-mouse-scope section {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  background: rgba(250, 250, 250, 0.96);
+}
+
+.lab-mouse-scope .hover-boxes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.lab-mouse-scope .hover-box {
+  width: 120px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eceff1;
+  border: 2px solid #90a4ae;
+  border-radius: 8px;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.lab-mouse-scope .hover-box.hover-active {
+  background: #c8e6c9;
+  border-color: #4caf50;
+  transform: scale(1.05);
+}
+
+.lab-mouse-scope #log-target-mouse {
+  font-size: 0.9rem;
+  color: #555;
+  min-height: 2.5em;
+  margin-top: 0.5rem;
+}
+
+.lab-mouse-scope .draggable {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  background: #bbdefb;
+  border: 2px solid #2196f3;
+  border-radius: 6px;
+  cursor: grab;
+  user-select: none;
+}
+
+.lab-mouse-scope .draggable.dragging {
+  opacity: 0.6;
+  cursor: grabbing;
+}
+
+.lab-mouse-scope .draggable img {
+  display: block;
+  max-width: 100px;
+  max-height: 80px;
+  pointer-events: none;
+}
+
+.lab-mouse-scope .drag-source {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.lab-mouse-scope .drop-here {
+  min-height: 100px;
+  padding: 1rem;
+  border: 2px dashed #607d8b;
+  border-radius: 8px;
+  background: #eceff1;
+}
+
+.lab-mouse-scope .drop-here.drag-over {
+  background: #fff3e0;
+  border-color: #ff9800;
+}

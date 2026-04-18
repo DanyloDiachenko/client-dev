@@ -33,6 +33,47 @@
         border: 1px solid #999;
         margin: 0.5rem 0;
       }
+      #lab-events section {
+        margin: 1rem 0;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        background: rgba(252, 252, 252, 0.98);
+      }
+      #lab-events button {
+        margin: 0.25rem;
+        padding: 0.4rem 0.8rem;
+        cursor: pointer;
+      }
+      #click-list {
+        list-style: none;
+        padding: 0;
+      }
+      #click-list li {
+        padding: 0.5rem 1rem;
+        margin: 0.25rem 0;
+        background: #eceff1;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      #click-list li.highlight {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+      }
+      #behavior-menu {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+      [data-behavior] {
+        cursor: pointer;
+        padding: 0.3rem 0.6rem;
+        margin: 0.2rem;
+      }
+      .behavior-demo {
+        padding: 0.5rem;
+        border: 1px dashed #999;
+        margin: 0.5rem 0;
+      }
     </style>
     <script>
       (function () {
@@ -386,6 +427,70 @@
       </section>
     </div>
 
+    <div id="lab-events">
+      <h2>Події: обробники, делегування, data-*</h2>
+
+      <section>
+        <h3>Подія миші для інтерфейсу ПЗ</h3>
+        <button type="button" id="btn-via-attr" onclick="handlerViaAttribute()">
+          Через атрибут onclick
+        </button>
+        <button type="button" id="btn-via-property">Через властивість .onclick</button>
+      </section>
+
+      <section>
+        <h3>addEventListener — кілька обробників</h3>
+        <button type="button" id="btn-multiple-handlers">
+          Клік — три обробники (консоль F12)
+        </button>
+      </section>
+
+      <section>
+        <h3>Обробник-об'єкт (handleEvent), removeEventListener</h3>
+        <button type="button" id="btn-handler-object">Кнопка з об'єктом</button>
+        <button type="button" onclick="setupObjectListener()">Додати об'єкт</button>
+        <button type="button" onclick="removeObjectListener()">Видалити</button>
+      </section>
+
+      <section>
+        <h3>Делегування: каталог модулів</h3>
+        <ul id="click-list">
+          <li>Операційна система</li>
+          <li>Середовище виконання</li>
+          <li>Бібліотеки та пакети</li>
+          <li>Конфігурація та секрети</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Меню репозиторію (data-action)</h3>
+        <div id="behavior-menu">
+          <button type="button" data-action="save">Зберегти package.json</button>
+          <button type="button" data-action="load">Завантажити залежності</button>
+          <button type="button" data-action="clear">Очистити кеш збірки</button>
+          <button type="button" data-action="export">Експорт SBOM</button>
+        </div>
+      </section>
+
+      <section>
+        <h3>Поведінка (data-behavior)</h3>
+        <div class="behavior-demo">
+          <span
+            data-behavior="toggle-text"
+            data-prev="Показати опис ліцензії."
+            data-next="GPL: копілефт, відкритий код."
+            >Показати опис ліцензії.</span
+          >
+        </div>
+        <div class="behavior-demo">
+          <button type="button" data-behavior="log-id" data-id="module-auth-01">
+            Лог id модуля
+          </button>
+        </div>
+      </section>
+    </div>
+
     <script src="js/script.js"></script>
+    <script src="js/events.js"></script>
   </body>
 </html>
