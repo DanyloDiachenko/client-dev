@@ -1,0 +1,72 @@
+.lab4-scope {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px dashed #90a4ae;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.lab4-scope article p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.lab4-scope section > p {
+  background-color: #e8f5e9;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid #4caf50;
+}
+
+.lab4-scope .selector-pair-first h2 + p {
+  font-weight: 700;
+  color: #1565c0;
+}
+
+.lab4-scope .license-block h3 + ul {
+  list-style-type: square;
+  color: #6a1b9a;
+}
+
+.lab4-scope nav.demo-nav > a {
+  display: inline-block;
+  margin-right: 1rem;
+  color: #0277bd;
+}
+
+.lab4-scope nav.demo-nav a {
+  text-decoration: none;
+}
+
+.lab4-scope nav.demo-nav a:hover {
+  text-decoration: underline;
+}
+
+.lab4-scope div.content p {
+  font-style: italic;
+  color: #795548;
+}
+
+.lab4-scope ul.stack-list > li {
+  margin: 0.25rem 0;
+  padding-left: 0.5rem;
+}
+
+.lab4-scope ul.stack-list li li {
+  margin-left: 1rem;
+  color: #00838f;
+}
+
+.lab4-scope footer.mini-footer > p {
+  font-size: 0.9rem;
+  color: #757575;
+  margin-top: 2rem;
+}
+
+.lab4-scope table.mini td + td {
+  border-left: 2px solid #37474f;
+}
+
+.lab4-scope table.mini tr > td:first-child {
+  font-weight: 600;
+  background-color: #eceff1;
+}

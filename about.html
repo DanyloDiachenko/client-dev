@@ -5,6 +5,7 @@
     <meta name="author" content="D. Diachenko" />
     <title>Життєвий цикл ПЗ — Програмне забезпечення</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/selectors.css" />
     <style>
       a:link {
         color: #16a085;
@@ -47,5 +48,95 @@
       типів ПЗ, списки ліцензій, зображення інтерфейсів та плаваючий фрейм з
       додатковим матеріалом.
     </p>
+
+    <div class="lab4-scope">
+      <h2 class="page-title">Демонстрація контекстних, дочірніх і сусідніх селекторів</h2>
+
+      <nav class="demo-nav">
+        <a href="#lab4-contextual">Контекстні</a>
+        <a href="#lab4-child">Дочірні</a>
+        <a href="#lab4-adjacent">Сусідні</a>
+      </nav>
+
+      <article>
+        <p>
+          Стаття про <strong>віртуалізацію</strong> та гіпервізори: стиль
+          <code>article p</code>.
+        </p>
+      </article>
+
+      <div class="selector-pair-first">
+        <h2 id="lab4-contextual">Контекстні селектори (потомок)</h2>
+        <p>
+          Перший абзац після h2 — стиль <code>h2 + p</code>: патчі безпеки для
+          ОС.
+        </p>
+        <p>
+          Другий абзац без правила сусіда: оновлення прикладного ПЗ.
+        </p>
+      </div>
+
+      <section>
+        <p>
+          Прямий дочірній абзац секції — <code>section &gt; p</code>: ядро ОС.
+        </p>
+        <div class="content">
+          <p>
+            Вкладений div — <code>div.content p</code>: драйвери та апаратура.
+          </p>
+        </div>
+      </section>
+
+      <h2 id="lab4-child">Дочірні селектори (&gt;)</h2>
+      <p>Список із вкладеністю (<code>ul.stack-list &gt; li</code>):</p>
+      <ul class="stack-list">
+        <li>Операційна система</li>
+        <li>
+          Середовище виконання
+          <ul>
+            <li>JVM, .NET CLR — вкладений рівень (<code>ul li li</code>).</li>
+          </ul>
+        </li>
+        <li>Бібліотеки та фреймворки</li>
+      </ul>
+
+      <h2 id="lab4-adjacent">Сусідні селектори (+)</h2>
+      <section class="license-block">
+        <h3>Ліцензії</h3>
+        <ul>
+          <li>
+            Список одразу після h3 — <code>h3 + ul</code>: MIT, Apache 2.0,
+            GPL.
+          </li>
+          <li>Комерційні EULA та OEM.</li>
+        </ul>
+      </section>
+
+      <table class="mini" border="1">
+        <tr>
+          <td>Компонент</td>
+          <td>Роль</td>
+          <td>Приклад</td>
+        </tr>
+        <tr>
+          <td>Бутлоадер</td>
+          <td>Запуск</td>
+          <td>GRUB, UEFI</td>
+        </tr>
+      </table>
+      <p>
+        <small>
+          Таблиця з <code>td + td</code> та першою колонкою через
+          <code>td:first-child</code>.
+        </small>
+      </p>
+
+      <footer class="mini-footer">
+        <p>
+          Демо-підвал у межах <code>.lab4-scope</code> — правило
+          <code>footer.mini-footer &gt; p</code>.
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
