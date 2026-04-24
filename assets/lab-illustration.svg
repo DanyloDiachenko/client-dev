@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="320" viewBox="0 0 980 320" role="img" aria-label="!E5<0 68BBT2>3> F8:;C ">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8daf0"/>
+      <stop offset="1" stop-color="#d6f5f0"/>
+    </linearGradient>
+    <style>
+      .bg{fill:url(#g)}
+      .box{fill:#ffffff;stroke:#2c3e50;stroke-width:2}
+      .title{font:700 18px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill:#2c3e50}
+      .label{font:600 14px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill:#2c3e50}
+      .muted{font:400 12px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill:#5b6773}
+      .arrow{stroke:#2c3e50;stroke-width:2;fill:none;marker-end:url(#m)}
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2c3e50"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="980" height="320" rx="18"/>
+  <text class="title" x="28" y="44">SDLC / 8BBT289 F8:;  (A?@>I5=>)</text>
+  <text class="muted" x="28" y="68">;NAB@0FVO 4;O ;01>@0B>@=8E: HTML + CSS + ?>4VW + JS</text>
+
+  <g transform="translate(28,98)">
+    <rect class="box" x="0" y="0" width="168" height="76" rx="12"/>
+    <text class="label" x="14" y="30">8<>38</text>
+    <text class="muted" x="14" y="52">user stories, SRS</text>
+
+    <rect class="box" x="196" y="0" width="168" height="76" rx="12"/>
+    <text class="label" x="210" y="30">8709=</text>
+    <text class="muted" x="210" y="52">0@EVB5:BC@0, UI</text>
+
+    <rect class="box" x="392" y="0" width="168" height="76" rx="12"/>
+    <text class="label" x="406" y="30">>4</text>
+    <text class="muted" x="406" y="52">@50;V70FVO, @52N</text>
+
+    <rect class="box" x="588" y="0" width="168" height="76" rx="12"/>
+    <text class="label" x="602" y="30">"5AB8</text>
+    <text class="muted" x="602" y="52">unit, e2e, QA</text>
+
+    <rect class="box" x="784" y="0" width="168" height="76" rx="12"/>
+    <text class="label" x="798" y="30"> 5;V7</text>
+    <text class="muted" x="798" y="52">25@AVW, ?0BGV</text>
+
+    <path class="arrow" d="M168,38 L196,38"/>
+    <path class="arrow" d="M364,38 L392,38"/>
+    <path class="arrow" d="M560,38 L588,38"/>
+    <path class="arrow" d="M756,38 L784,38"/>
+  </g>
+
+  <g transform="translate(28,212)">
+    <rect class="box" x="0" y="0" width="924" height="82" rx="12"/>
+    <text class="label" x="14" y="30">!C?@>2V4</text>
+    <text class="muted" x="14" y="54"><>=VB>@8=3 " ?V4B@8<:0 " 28?@02;5==O " 4>:C<5=B0FVO " 157?5:0</text>
+  </g>
+</svg>
